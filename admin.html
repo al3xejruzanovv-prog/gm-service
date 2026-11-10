@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход для администратора | G-M Service</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232b59ff'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>GM</text></svg>">
+</head>
+<body data-cms-admin class="admin-page">
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-badge">GM</span><span>G-M Service<small>центр по ремонту техники</small></span></a>
+    <a href="index.html" class="btn btn-ghost btn-sm" style="margin-left:auto">← На сайт</a>
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="admin-card">
+    <span class="section-tag">Админ-панель</span>
+    <h1>Вход для администратора</h1>
+    <p class="admin-sub">После входа вы сможете менять тексты и цены прямо на страницах сайта. Изменения сохраняются в Supabase и сразу видят посетители.</p>
+
+    <div id="cmsResume" class="cms-resume" hidden>
+      <p>Вы уже вошли как <b id="cmsResumeEmail"></b>.</p>
+      <a class="btn btn-primary" href="index.html?edit=1">Продолжить редактирование →</a>
+      <button type="button" id="cmsLogout" class="btn btn-ghost btn-sm">Выйти из аккаунта</button>
+    </div>
+
+    <form id="cmsLoginForm" class="cms-login" autocomplete="on">
+      <label>
+        <span>E-mail</span>
+        <input type="email" name="email" autocomplete="username" placeholder="admin@example.com" required>
+      </label>
+      <label>
+        <span>Пароль</span>
+        <input type="password" name="password" autocomplete="current-password" placeholder="••••••••" required>
+      </label>
+      <button type="submit" class="btn btn-primary">Войти</button>
+      <p id="cmsLoginMsg" class="cms-msg" role="status"></p>
+    </form>
+
+    <details class="cms-help">
+      <summary>Как подключить админку</summary>
+      <ol>
+        <li>Создайте бесплатный проект на <a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a>.</li>
+        <li>В SQL Editor выполните скрипт <code>supabase/schema.sql</code> из репозитория.</li>
+        <li>В Authentication → Users создайте администратора (e-mail и пароль).</li>
+        <li>Вставьте Project URL и anon key в <code>assets/js/config.js</code>.</li>
+      </ol>
+      <p>Подробная инструкция — в файле <code>README-admin.md</code>.</p>
+    </details>
+  </div>
+</main>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/cms.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
