@@ -9,6 +9,6 @@
   админка показывает инструкцию, а сайт работает как обычно.
 */
 window.GM_CMS = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://mxdyuqmjhuvcccfioafa.supabase.co",
+  supabaseAnonKey: "sb_publishable_mbFKVcsCLTcUYSe28qxWfA_rqPuBHd8"
 };
