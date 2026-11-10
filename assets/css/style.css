@@ -321,6 +321,12 @@ ul{list-style:none}
   border-top:1px solid rgba(255,255,255,.08);padding-top:22px;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;
 }
+.footer .footer-admin{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  color:#8f9bd6;font-size:14.5px;padding:4px 0;transition:color .2s;
+}
+.footer .footer-admin::before{content:"🔒";font-size:11px;line-height:1}
+.footer .footer-admin:hover{color:#fff}
 
 /* плавающая кнопка звонка */
 .call-fab{
